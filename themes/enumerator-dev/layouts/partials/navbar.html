@@ -1,0 +1,20 @@
+<div class="navbar bg-base-200 px-4">
+    <div class="flex-1">
+        <a class="text-xl font-bold text-base-content hover:text-primary" href="{{ .Site.BaseURL }}">
+            {{ with .Site.Params.logo }}
+                <img class="h-8" src="{{ . }}" alt="{{ $.Site.Title }}">
+            {{ else }}
+                {{ .Site.Title }}
+            {{ end }}
+        </a>
+    </div>
+    <div class="flex-none">
+        <ul class="flex items-center gap-4">
+            {{ range .Site.Menus.main }}
+            <li>
+                <a class="text-base-content/70 hover:text-primary text-sm" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>

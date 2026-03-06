@@ -1,0 +1,12 @@
+{{ $paginator := .Paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="flex justify-center items-center gap-4 pt-8 text-sm text-base-content/50">
+    {{ if $paginator.HasPrev }}
+        <a class="text-primary" href="{{ $paginator.Prev.URL }}">&larr; Newer</a>
+    {{ end }}
+    <span>Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+    {{ if $paginator.HasNext }}
+        <a class="text-primary" href="{{ $paginator.Next.URL }}">Older &rarr;</a>
+    {{ end }}
+</nav>
+{{ end }}

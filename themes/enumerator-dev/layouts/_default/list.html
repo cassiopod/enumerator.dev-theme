@@ -1,0 +1,59 @@
+{{ define "main" }}
+
+{{ if .Data.Singular }}
+<header class="mb-8">
+    <h1 class="text-3xl font-bold mb-2">{{ .Title }}</h1>
+    {{ with .Content }}
+        <div class="text-base-content/60">{{ . }}</div>
+    {{ end }}
+</header>
+{{ end }}
+
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+  {{ $pages = where .Site.RegularPages "Section" "post" }}
+{{ end }}
+{{ range (.Paginate $pages).Pages }}
+<article class="py-8 border-b border-base-content/15 last:border-b-0">
+
+    <h2 class="text-3xl font-bold mb-4">
+        <a class="text-base-content hover:text-primary" href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+
+    <div class="flex flex-wrap items-center gap-3 mb-6 text-sm text-base-content/50">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        {{ with .ReadingTime }}
+            <span>&middot;</span>
+            <span>{{ . }} min read</span>
+        {{ end }}
+        {{ with .Params.categories }}
+            <span>&middot;</span>
+            {{ range . }}
+                <a class="badge badge-outline badge-primary badge-sm" href="{{ "categories/" | absURL }}{{ . | urlize }}/">{{ . }}</a>
+            {{ end }}
+        {{ end }}
+    </div>
+
+    {{ with .Params.images }}
+        {{ with index . 0 }}
+        <figure class="mb-6">
+            <img
+                class="w-full rounded-lg"
+                src="{{ . }}"
+                alt=""
+                loading="lazy"
+            >
+        </figure>
+        {{ end }}
+    {{ end }}
+
+    <section class="prose max-w-none">
+        {{ .Content }}
+    </section>
+
+</article>
+{{ end }}
+
+{{ partial "pagination.html" . }}
+
+{{ end }}

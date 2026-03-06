@@ -1,0 +1,45 @@
+{{ define "main" }}
+<article>
+
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold mb-3">{{ .Title }}</h1>
+        <div class="flex items-center gap-3 text-base-content/50">
+            {{ with .Site.Params.author }}
+                <span>{{ . }}</span>
+                <span>&middot;</span>
+            {{ end }}
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            {{ with .ReadingTime }}
+                <span>&middot;</span>
+                <span>{{ . }} min read</span>
+            {{ end }}
+        </div>
+    </header>
+
+    {{ with .Params.images }}
+        {{ with index . 0 }}
+        <figure class="mb-8">
+            <img
+                class="w-full rounded-lg"
+                src="{{ . }}"
+                alt=""
+                loading="lazy"
+            >
+        </figure>
+        {{ end }}
+    {{ end }}
+
+    <section class="prose max-w-none">
+        {{ .Content }}
+    </section>
+
+    {{ with .GetTerms "categories" }}
+        <div class="flex flex-wrap gap-2 mt-8 pt-6 border-t border-base-300">
+            {{ range . }}
+                <a class="badge badge-outline badge-primary" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+        </div>
+    {{ end }}
+
+</article>
+{{ end }}

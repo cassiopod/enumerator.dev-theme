@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+
+    {{ partial "navbar.html" . }}
+
+    <main class="mx-auto w-full max-w-3xl px-5 py-8">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+    {{ partial "custom_footer.html" . }}
+
+    <script src="{{ "js/mermaid.js" | relURL }}" defer></script>
+</body>
+</html>

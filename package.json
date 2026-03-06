@@ -1,0 +1,14 @@
+{
+  "name": "enumerator-dev-hugo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i themes/enumerator-dev/assets/css/main.css -o themes/enumerator-dev/static/custom.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "daisyui": "^5.5.18",
+    "tailwindcss": "^4.2.0"
+  }
+}

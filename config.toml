@@ -1,0 +1,77 @@
+baseURL = 'https://enumerator.dev/'
+languageCode = 'en-us'
+title = 'enumerator.dev'
+theme = 'enumerator-dev'
+paginate = 10
+rssLimit = 25
+enableRobotsTXT = true
+pluralizeListTitles = false
+
+[params]
+  description = 'A dev blog by cassiopod'
+
+[taxonomies]
+  category = 'categories'
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    guessSyntax = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[mediaTypes]
+  [mediaTypes."application/json"]
+    suffixes = ["json"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    baseName = "feed"
+  [outputFormats.JSON]
+    baseName = "feed"
+  [outputFormats.RSD]
+    mediaType = "application/xml"
+    baseName = "rsd"
+    isPlainText = true
+    notAlternative = true
+  [outputFormats.ArchiveJSON]
+    mediaType = "application/json"
+    path = "archive"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true
+  [outputFormats.PhotosJSON]
+    mediaType = "application/json"
+    path = "photos"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true
+  [outputFormats.PodcastXML]
+    mediaType = "application/rss+xml"
+    baseName = "podcast"
+    isPlainText = true
+    notAlternative = true
+  [outputFormats.PodcastJSON]
+    mediaType = "application/json"
+    baseName = "podcast"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON', 'RSD', 'ArchiveJSON', 'PhotosJSON', 'PodcastXML', 'PodcastJSON']
+  page = ['HTML']
+  section = ['HTML']
+  taxonomy = ['HTML', 'RSS', 'JSON']
+  term = ['HTML', 'RSS', 'JSON']
+
+[menus]
+  [[menus.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 10
+  [[menus.footer]]
+    name = 'RSS'
+    url = '/feed.xml'
+    weight = 10

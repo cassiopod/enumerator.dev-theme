@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<header class="mb-8">
+    <h1 class="text-3xl font-bold mb-2">{{ .Title }}</h1>
+    {{ with .Content }}
+        <p class="text-base-content/60">{{ . }}</p>
+    {{ end }}
+</header>
+
+{{ range .Paginator.Pages }}
+    {{ partial "card.html" . }}
+{{ end }}
+
+{{ partial "pagination.html" . }}
+
+{{ end }}

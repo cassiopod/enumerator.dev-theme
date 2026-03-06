@@ -1,0 +1,270 @@
+@import "tailwindcss";
+@source "hugo_stats.json";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/SourceSerif4Variable-Roman.ttf.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/SourceSerif4Variable-Italic.ttf.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/fonts/SourceSans3VF-Upright.ttf.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/fonts/SourceSans3VF-Italic.ttf.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('/fonts/SourceCodeVF-Upright.ttf.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('/fonts/SourceCodeVF-Italic.ttf.woff2') format('woff2');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+html {
+  font-size: 18px;
+}
+
+@plugin "daisyui/theme" {
+  name: "catppuccin-latte";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #eff1f5;
+  --color-base-200: #e6e9ef;
+  --color-base-300: #dce0e8;
+  --color-base-content: #4c4f69;
+  --color-primary: #8839ef;
+  --color-primary-content: #eff1f5;
+  --color-secondary: #1e66f5;
+  --color-secondary-content: #eff1f5;
+  --color-accent: #ea76cb;
+  --color-accent-content: #eff1f5;
+  --color-neutral: #ccd0da;
+  --color-neutral-content: #4c4f69;
+  --color-info: #209fb5;
+  --color-info-content: #eff1f5;
+  --color-success: #40a02b;
+  --color-success-content: #eff1f5;
+  --color-warning: #df8e1d;
+  --color-warning-content: #eff1f5;
+  --color-error: #d20f39;
+  --color-error-content: #eff1f5;
+}
+
+@plugin "daisyui/theme" {
+  name: "catppuccin-mocha";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #1e1e2e;
+  --color-base-200: #181825;
+  --color-base-300: #11111b;
+  --color-base-content: #cdd6f4;
+  --color-primary: #cba6f7;
+  --color-primary-content: #1e1e2e;
+  --color-secondary: #89b4fa;
+  --color-secondary-content: #1e1e2e;
+  --color-accent: #f5c2e7;
+  --color-accent-content: #1e1e2e;
+  --color-neutral: #313244;
+  --color-neutral-content: #cdd6f4;
+  --color-info: #74c7ec;
+  --color-info-content: #1e1e2e;
+  --color-success: #a6e3a1;
+  --color-success-content: #1e1e2e;
+  --color-warning: #f9e2af;
+  --color-warning-content: #1e1e2e;
+  --color-error: #f38ba8;
+  --color-error-content: #1e1e2e;
+}
+
+body {
+  font-family: 'Source Sans 3', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+}
+
+code, kbd, pre, samp {
+  font-family: 'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Catppuccin tokens for Chroma syntax highlighting */
+:root {
+  --ctp-rosewater: #dc8a78;
+  --ctp-flamingo: #dd7878;
+  --ctp-pink: #ea76cb;
+  --ctp-mauve: #8839ef;
+  --ctp-red: #d20f39;
+  --ctp-maroon: #e64553;
+  --ctp-peach: #fe640b;
+  --ctp-yellow: #df8e1d;
+  --ctp-green: #40a02b;
+  --ctp-teal: #179299;
+  --ctp-sky: #04a5e5;
+  --ctp-sapphire: #209fb5;
+  --ctp-blue: #1e66f5;
+  --ctp-lavender: #7287fd;
+  --ctp-text: #4c4f69;
+  --ctp-subtext1: #5c5f77;
+  --ctp-overlay2: #7c7f93;
+  --ctp-overlay1: #8c8fa1;
+  --ctp-surface2: #acb0be;
+  --ctp-surface1: #bcc0cc;
+  --ctp-surface0: #ccd0da;
+  --ctp-base: #eff1f5;
+  --ctp-mantle: #e6e9ef;
+  --ctp-crust: #dce0e8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ctp-rosewater: #f5e0dc;
+    --ctp-flamingo: #f2cdcd;
+    --ctp-pink: #f5c2e7;
+    --ctp-mauve: #cba6f7;
+    --ctp-red: #f38ba8;
+    --ctp-maroon: #eba0ac;
+    --ctp-peach: #fab387;
+    --ctp-yellow: #f9e2af;
+    --ctp-green: #a6e3a1;
+    --ctp-teal: #94e2d5;
+    --ctp-sky: #89dceb;
+    --ctp-sapphire: #74c7ec;
+    --ctp-blue: #89b4fa;
+    --ctp-lavender: #b4befe;
+    --ctp-text: #cdd6f4;
+    --ctp-subtext1: #bac2de;
+    --ctp-overlay2: #9399b2;
+    --ctp-overlay1: #7f849c;
+    --ctp-surface2: #585b70;
+    --ctp-surface1: #45475a;
+    --ctp-surface0: #313244;
+    --ctp-base: #1e1e2e;
+    --ctp-mantle: #181825;
+    --ctp-crust: #11111b;
+  }
+}
+
+/* Chroma code block background */
+.prose :where(pre) {
+  background-color: var(--ctp-mantle);
+  color: var(--ctp-text);
+}
+
+/* Chroma syntax highlighting with Catppuccin colors */
+/* Comments */
+.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1, .chroma .cs, .chroma .cp, .chroma .cpf {
+  color: var(--ctp-overlay2);
+  font-style: italic;
+}
+/* Keywords */
+.chroma .k, .chroma .kc, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .kt {
+  color: var(--ctp-mauve);
+}
+/* Strings */
+.chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl, .chroma .sd, .chroma .s2, .chroma .se, .chroma .sh, .chroma .si, .chroma .sx, .chroma .sr, .chroma .s1, .chroma .ss {
+  color: var(--ctp-green);
+}
+/* Numbers */
+.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi, .chroma .il, .chroma .mo {
+  color: var(--ctp-peach);
+}
+/* Operators */
+.chroma .o, .chroma .ow {
+  color: var(--ctp-sky);
+}
+/* Functions */
+.chroma .nf, .chroma .fm {
+  color: var(--ctp-blue);
+}
+/* Names/variables */
+.chroma .n, .chroma .na, .chroma .nb, .chroma .ni, .chroma .nl, .chroma .nn, .chroma .nx, .chroma .py {
+  color: var(--ctp-text);
+}
+/* Built-in names */
+.chroma .nb {
+  color: var(--ctp-red);
+}
+/* Class names */
+.chroma .nc, .chroma .no, .chroma .nd, .chroma .ne {
+  color: var(--ctp-yellow);
+}
+/* Name tag (HTML tags) */
+.chroma .nt {
+  color: var(--ctp-mauve);
+}
+/* Name attribute */
+.chroma .na {
+  color: var(--ctp-yellow);
+}
+/* Punctuation */
+.chroma .p {
+  color: var(--ctp-overlay2);
+}
+/* Generic (diff) */
+.chroma .gi { color: var(--ctp-green); }
+.chroma .gd { color: var(--ctp-red); }
+
+/* Hide raw mermaid source until rendered */
+.mermaid:not([data-processed]) {
+  visibility: hidden;
+}
+
+/* Center mermaid diagrams and match prose vertical rhythm */
+.prose .mermaid {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* Fix low-contrast Mermaid sequence diagram elements in dark mode */
+@media (prefers-color-scheme: dark) {
+  .actor-line {
+    stroke: var(--ctp-overlay2) !important;
+  }
+
+  .loopLine {
+    stroke: var(--ctp-overlay1) !important;
+  }
+
+  .labelBox {
+    stroke: var(--ctp-overlay1) !important;
+    fill: var(--ctp-surface0) !important;
+  }
+}
