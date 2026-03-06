@@ -14,9 +14,9 @@ See `exampleSite/` for a working site using this theme.
 
 **CSS build:** Tailwind CSS v4 + daisyUI v5 + @tailwindcss/typography. Pre-compiled via Tailwind CLI and committed as `static/custom.css`. No Hugo asset pipeline (Hugo 0.91 doesn't support `css.TailwindCSS`).
 
-**Rebuild CSS:** From `exampleSite/`, run `npm install` then `npm run build:css` (after editing `assets/css/main.css`).
+**Rebuild CSS:** From theme root, run `npm install` then `npm run build:css` (after editing `assets/css/main.css`).
 
-**Dev server:** From `exampleSite/`, run `hugo server -D --themesDir ../..`
+**Dev server:** From `exampleSite/`, run `hugo server -D`
 
 ## Template structure
 
@@ -66,3 +66,12 @@ See `exampleSite/` for a working site using this theme.
 ## Configuration
 
 Site config in `config.toml` (not `hugo.toml` — Hugo 0.91 doesn't support that name). Menus: `menus.main` (navbar), `menus.footer` (footer). See `exampleSite/config.toml` for required output formats (RSS, JSON, RSD, archive, photos, podcast).
+
+### micro.blog params
+
+Templates use `.Site.Params` for author info (compatible with both Hugo 0.91 and modern Hugo):
+
+- `microblog_username` — micro.blog username (for identity links and favicon)
+- `author_avatar` — avatar URL (for JSON feeds and newsletter)
+- `author_email` — author email (for RSS feeds)
+- `author_name` — author display name (for RSS feeds)
