@@ -3,5 +3,5 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="stylesheet" href="{{ "custom.css" | relURL }}">
+<link rel="stylesheet" href="{{ "cassiopod.css" | relURL }}">
 {{ partial "microblog_head.html" . }}

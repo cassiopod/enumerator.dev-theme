@@ -12,7 +12,7 @@ See `exampleSite/` for a working site using this theme.
 
 **Hugo version:** 0.91 (required for micro.blog compatibility)
 
-**CSS build:** Tailwind CSS v4 + daisyUI v5 + @tailwindcss/typography. Pre-compiled via Tailwind CLI and committed as `static/custom.css`. No Hugo asset pipeline (Hugo 0.91 doesn't support `css.TailwindCSS`).
+**CSS build:** Tailwind CSS v4 + daisyUI v5 + @tailwindcss/typography. Pre-compiled via Tailwind CLI and committed as `static/cassiopod.css`. No Hugo asset pipeline (Hugo 0.91 doesn't support `css.TailwindCSS`).
 
 **Rebuild CSS:** From theme root, run `npm install` then `npm run build:css` (after editing `assets/css/main.css`).
 
