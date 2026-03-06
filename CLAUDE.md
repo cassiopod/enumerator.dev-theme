@@ -1,26 +1,24 @@
 # CLAUDE.md
 
-Hugo site for enumerator.dev using the `enumerator-dev` theme. Targets **Hugo 0.91** for micro.blog compatibility.
+Cassiopod is a Hugo theme with Catppuccin colors, micro.blog compatibility, and Hugo 0.91 support. Based on the visual design of the enumerator-dev Ghost theme.
+
+## Usage
+
+Add to a Hugo site as `themes/cassiopod/`, then set `theme = 'cassiopod'` in `config.toml`.
+
+See `exampleSite/` for a working site using this theme.
 
 ## Development
 
 **Hugo version:** 0.91 (required for micro.blog compatibility)
 
-**Start dev server:** `hugo server -D` (includes drafts)
+**CSS build:** Tailwind CSS v4 + daisyUI v5 + @tailwindcss/typography. Pre-compiled via Tailwind CLI and committed as `static/custom.css`. No Hugo asset pipeline (Hugo 0.91 doesn't support `css.TailwindCSS`).
 
-**Build for production:** `hugo`
+**Rebuild CSS:** From `exampleSite/`, run `npm install` then `npm run build:css` (after editing `assets/css/main.css`).
 
-**Install dependencies:** `npm install` (from project root)
+**Dev server:** From `exampleSite/`, run `hugo server -D --themesDir ../..`
 
-**Rebuild CSS:** `npm run build:css` (run after editing `assets/css/main.css`, commits the output)
-
-## Theme
-
-Located at `themes/enumerator-dev/`. Tailwind CSS v4 + daisyUI v5 + @tailwindcss/typography.
-
-CSS is pre-compiled via Tailwind CLI (`npm run build:css`) and committed as `static/custom.css`. No Hugo asset pipeline is used (Hugo 0.91 doesn't support `css.TailwindCSS`).
-
-### Template structure
+## Template structure
 
 - `layouts/_default/baseof.html` — root layout (navbar, main, footer, custom_footer)
 - `layouts/_default/list.html` — homepage and section listings (shows full post content)
@@ -30,7 +28,7 @@ CSS is pre-compiled via Tailwind CLI (`npm run build:css`) and committed as `sta
 - `layouts/404.html` — error page
 - `layouts/_default/_markup/render-codeblock-mermaid.html` — preserves mermaid code blocks for client-side rendering
 
-### micro.blog templates (from theme-blank)
+### micro.blog templates
 
 - `layouts/index.xml`, `layouts/index.json` — RSS and JSON Feed
 - `layouts/_default/rss.xml`, `layouts/_default/list.json.json` — default feed templates
@@ -52,14 +50,14 @@ CSS is pre-compiled via Tailwind CLI (`npm run build:css`) and committed as `sta
 - `card.html` — post card for archive listings
 - `pagination.html` — newer/older navigation
 
-### Styling
+## Styling
 
 - Catppuccin palette: latte (light), mocha (dark via `prefers-color-scheme`)
 - Fonts: Source Serif 4 (headings), Source Sans 3 (body), Source Code Pro (code)
 - Syntax highlighting: Chroma (server-side) with Catppuccin CSS variables
 - Diagrams: Mermaid via CDN (`static/js/mermaid.js`)
 
-## Content
+## Content model
 
 - Posts: `content/post/*.md` — front matter: title, date, categories, images, summary, draft
 - Pages: `content/page/*.md` with `type: "page"` — use `hide_title: true` to hide title/image
@@ -67,4 +65,4 @@ CSS is pre-compiled via Tailwind CLI (`npm run build:css`) and committed as `sta
 
 ## Configuration
 
-Site config in `config.toml` (not `hugo.toml` — Hugo 0.91 doesn't support that name). Menus: `menus.main` (navbar), `menus.footer` (footer). Includes micro.blog output formats (RSS, JSON, RSD, archive, photos, podcast).
+Site config in `config.toml` (not `hugo.toml` — Hugo 0.91 doesn't support that name). Menus: `menus.main` (navbar), `menus.footer` (footer). See `exampleSite/config.toml` for required output formats (RSS, JSON, RSD, archive, photos, podcast).
