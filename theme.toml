@@ -1,6 +1,6 @@
-name = "enumerator-dev"
+name = "cassiopod"
 license = "MIT"
-licenselink = "https://github.com/yourusername/enumerator-dev-theme/blob/main/LICENSE"
+licenselink = "https://github.com/cassiopod/cassiopod-theme/blob/main/LICENSE"
 description = "A clean dev blog theme with Catppuccin colors, Tailwind CSS, and daisyUI"
 tags = ["blog", "tailwind", "daisyui", "catppuccin", "dark-mode"]
 min_version = "0.91.0"
