@@ -9,6 +9,7 @@ pluralizeListTitles = false
 
 [params]
   description = 'A dev blog by cassiopod'
+  microblog_username = 'cassiopod'
 
 [taxonomies]
   category = 'categories'

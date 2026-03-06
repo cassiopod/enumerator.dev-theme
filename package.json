@@ -1,9 +1,9 @@
 {
-  "name": "cassiopod-example-site",
+  "name": "cassiopod-theme",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build:css": "npx @tailwindcss/cli -i ../assets/css/main.css -o ../static/custom.css --minify"
+    "build:css": "npx @tailwindcss/cli -i assets/css/main.css -o static/custom.css --minify"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.0",
