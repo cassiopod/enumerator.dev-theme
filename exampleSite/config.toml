@@ -1,7 +1,7 @@
 baseURL = 'https://enumerator.dev/'
 languageCode = 'en-us'
 title = 'enumerator.dev'
-theme = 'enumerator-dev'
+theme = 'cassiopod'
 paginate = 10
 rssLimit = 25
 enableRobotsTXT = true
