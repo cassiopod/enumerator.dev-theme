@@ -4,7 +4,7 @@
 [markup]
   [markup.highlight]
     codeFences = true
-    guessSyntax = true
+    guessSyntax = false
     lineNos = false
     lineNumbersInTable = true
     noClasses = false
