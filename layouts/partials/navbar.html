@@ -8,7 +8,8 @@
             {{ end }}
         </a>
     </div>
-    <div class="flex-none">
+    {{/* Desktop nav */}}
+    <div class="hidden sm:flex flex-none">
         <ul class="flex items-center gap-4">
             {{ range .Site.Menus.main }}
             <li>
@@ -16,5 +17,22 @@
             </li>
             {{ end }}
         </ul>
+    </div>
+    {{/* Mobile hamburger dropdown */}}
+    <div class="sm:hidden flex-none">
+        <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </label>
+            <ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-10 w-52 p-2 shadow">
+                {{ range .Site.Menus.main }}
+                <li>
+                    <a class="text-base-content/70 hover:text-primary text-sm" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
     </div>
 </div>
