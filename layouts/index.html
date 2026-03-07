@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ $pages := where .Site.RegularPages "Section" "post" }}
+{{ $pages := where .Site.RegularPages "Type" "post" }}
 {{ range (.Paginate $pages).Pages }}
 <article class="py-8 border-b border-base-content/15 last:border-b-0">
 
