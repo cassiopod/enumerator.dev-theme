@@ -14,30 +14,14 @@
   {{ $pages = where .Site.RegularPages "Type" "post" }}
 {{ end }}
 {{ range (.Paginate $pages).Pages }}
-<article class="py-8 border-b border-base-content/15 last:border-b-0">
-
-    <h2 class="text-3xl font-bold mb-4">
-        <a class="text-base-content hover:text-primary" href="{{ .Permalink }}">{{ .Title }}</a>
-    </h2>
-
-    <div class="flex flex-wrap items-center gap-3 mb-6 text-sm text-base-content/50">
+<article class="py-3 flex flex-wrap items-baseline gap-x-3">
+    <a class="text-lg font-semibold text-base-content hover:text-primary" href="{{ .Permalink }}">{{ .Title }}</a>
+    <span class="text-sm text-base-content/50">
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
         {{ with .ReadingTime }}
-            <span>&middot;</span>
-            <span>{{ . }} min read</span>
+            &middot; {{ . }} min read
         {{ end }}
-        {{ with .Params.categories }}
-            <span>&middot;</span>
-            {{ range . }}
-                <a class="badge badge-outline badge-primary badge-sm" href="{{ "categories/" | absURL }}{{ . | urlize }}/">{{ . }}</a>
-            {{ end }}
-        {{ end }}
-    </div>
-
-    <section class="prose max-w-none">
-        {{ .Content }}
-    </section>
-
+    </span>
 </article>
 {{ end }}
 
