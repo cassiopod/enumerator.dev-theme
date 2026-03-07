@@ -211,7 +211,7 @@ pre.chroma {
 .chroma .kn { color: var(--ctp-mauve); }
 .chroma .kp { color: var(--ctp-mauve); }
 .chroma .kr { color: var(--ctp-mauve); font-weight: bold; }
-.chroma .kt { color: var(--ctp-yellow); }
+.chroma .kt { color: var(--ctp-blue); }
 /* Names */
 .chroma .n { color: var(--ctp-text); }
 .chroma .na { color: var(--ctp-peach); }
@@ -224,7 +224,7 @@ pre.chroma {
 .chroma .nf { color: var(--ctp-blue); }
 .chroma .fm { color: var(--ctp-blue); }
 .chroma .ni { color: var(--ctp-text); font-weight: bold; }
-.chroma .nl { color: var(--ctp-sapphire); }
+.chroma .nl { color: var(--ctp-peach); }
 .chroma .nn { color: var(--ctp-blue); }
 .chroma .nx { color: var(--ctp-text); }
 .chroma .py { color: var(--ctp-text); }
