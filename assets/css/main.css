@@ -205,7 +205,7 @@ pre.chroma {
 .chroma .lnt { color: var(--ctp-overlay1); }
 /* Keywords */
 .chroma .k { color: var(--ctp-mauve); font-weight: bold; }
-.chroma .kc { color: var(--ctp-mauve); font-weight: bold; }
+.chroma .kc { color: var(--ctp-peach); }
 .chroma .kd { color: var(--ctp-mauve); }
 .chroma .kn { color: var(--ctp-mauve); }
 .chroma .kp { color: var(--ctp-mauve); }
@@ -213,26 +213,26 @@ pre.chroma {
 .chroma .kt { color: var(--ctp-yellow); }
 /* Names */
 .chroma .n { color: var(--ctp-text); }
-.chroma .na { color: var(--ctp-yellow); }
-.chroma .nb { color: var(--ctp-teal); font-style: italic; }
-.chroma .bp { color: var(--ctp-teal); font-style: italic; }
-.chroma .nc { color: var(--ctp-yellow); font-weight: bold; }
-.chroma .no { color: var(--ctp-yellow); }
+.chroma .na { color: var(--ctp-peach); }
+.chroma .nb { color: var(--ctp-peach); }
+.chroma .bp { color: var(--ctp-red); font-style: italic; }
+.chroma .nc { color: var(--ctp-flamingo); font-weight: bold; }
+.chroma .no { color: var(--ctp-peach); }
 .chroma .nd { color: var(--ctp-blue); font-weight: bold; }
 .chroma .ne { color: var(--ctp-peach); font-weight: bold; }
 .chroma .nf { color: var(--ctp-blue); }
 .chroma .fm { color: var(--ctp-blue); }
 .chroma .ni { color: var(--ctp-text); font-weight: bold; }
 .chroma .nl { color: var(--ctp-sapphire); }
-.chroma .nn { color: var(--ctp-yellow); }
+.chroma .nn { color: var(--ctp-blue); }
 .chroma .nx { color: var(--ctp-text); }
 .chroma .py { color: var(--ctp-text); }
-.chroma .nt { color: var(--ctp-mauve); }
+.chroma .nt { color: var(--ctp-blue); }
 .chroma .nv { color: var(--ctp-text); }
 .chroma .vc { color: var(--ctp-text); }
 .chroma .vg { color: var(--ctp-text); }
 .chroma .vi { color: var(--ctp-text); }
-.chroma .vm { color: var(--ctp-text); }
+.chroma .vm { color: var(--ctp-red); }
 /* Literals — Strings */
 .chroma .s { color: var(--ctp-green); }
 .chroma .sa { color: var(--ctp-green); }
@@ -241,9 +241,9 @@ pre.chroma {
 .chroma .dl { color: var(--ctp-green); }
 .chroma .sd { color: var(--ctp-green); font-style: italic; }
 .chroma .s2 { color: var(--ctp-green); }
-.chroma .se { color: var(--ctp-peach); font-weight: bold; }
+.chroma .se { color: var(--ctp-pink); }
 .chroma .sh { color: var(--ctp-green); }
-.chroma .si { color: var(--ctp-peach); }
+.chroma .si { color: var(--ctp-pink); }
 .chroma .sx { color: var(--ctp-green); }
 .chroma .sr { color: var(--ctp-peach); }
 .chroma .s1 { color: var(--ctp-green); }
