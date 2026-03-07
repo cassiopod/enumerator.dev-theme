@@ -1,0 +1,14 @@
+# Cassiopod theme default configuration
+# These settings are merged with the site config (site config takes precedence)
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
