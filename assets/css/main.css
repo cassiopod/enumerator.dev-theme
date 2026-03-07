@@ -180,65 +180,107 @@ code, kbd, pre, samp {
   }
 }
 
-/* Chroma code block background */
-.prose :where(pre) {
+/* Chroma code block background — override micro.blog defaults */
+.highlight pre,
+.prose :where(pre),
+pre.chroma {
+  background-color: var(--ctp-mantle) !important;
+  color: var(--ctp-text) !important;
+}
+
+.highlight,
+.chroma {
   background-color: var(--ctp-mantle);
   color: var(--ctp-text);
 }
 
-/* Chroma syntax highlighting with Catppuccin colors */
-/* Comments */
-.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1, .chroma .cs, .chroma .cp, .chroma .cpf {
-  color: var(--ctp-overlay2);
-  font-style: italic;
-}
+/* Chroma syntax highlighting — Catppuccin Latte (light) / Mocha (dark) */
+
+/* Error */
+.chroma .err { color: var(--ctp-red); }
+/* Line link, line highlight, line numbers, line numbers in table */
+.chroma .lnlinks { outline: none; text-decoration: none; color: inherit; }
+.chroma .hl { background-color: var(--ctp-surface0); }
+.chroma .ln,
+.chroma .lnt { color: var(--ctp-overlay1); }
 /* Keywords */
-.chroma .k, .chroma .kc, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .kt {
-  color: var(--ctp-mauve);
-}
-/* Strings */
-.chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl, .chroma .sd, .chroma .s2, .chroma .se, .chroma .sh, .chroma .si, .chroma .sx, .chroma .sr, .chroma .s1, .chroma .ss {
-  color: var(--ctp-green);
-}
-/* Numbers */
-.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi, .chroma .il, .chroma .mo {
-  color: var(--ctp-peach);
-}
+.chroma .k { color: var(--ctp-mauve); font-weight: bold; }
+.chroma .kc { color: var(--ctp-mauve); font-weight: bold; }
+.chroma .kd { color: var(--ctp-mauve); }
+.chroma .kn { color: var(--ctp-mauve); }
+.chroma .kp { color: var(--ctp-mauve); }
+.chroma .kr { color: var(--ctp-mauve); font-weight: bold; }
+.chroma .kt { color: var(--ctp-yellow); }
+/* Names */
+.chroma .n { color: var(--ctp-text); }
+.chroma .na { color: var(--ctp-yellow); }
+.chroma .nb { color: var(--ctp-teal); font-style: italic; }
+.chroma .bp { color: var(--ctp-teal); font-style: italic; }
+.chroma .nc { color: var(--ctp-yellow); font-weight: bold; }
+.chroma .no { color: var(--ctp-yellow); }
+.chroma .nd { color: var(--ctp-blue); font-weight: bold; }
+.chroma .ne { color: var(--ctp-peach); font-weight: bold; }
+.chroma .nf { color: var(--ctp-blue); }
+.chroma .fm { color: var(--ctp-blue); }
+.chroma .ni { color: var(--ctp-text); font-weight: bold; }
+.chroma .nl { color: var(--ctp-sapphire); }
+.chroma .nn { color: var(--ctp-yellow); }
+.chroma .nx { color: var(--ctp-text); }
+.chroma .py { color: var(--ctp-text); }
+.chroma .nt { color: var(--ctp-mauve); }
+.chroma .nv { color: var(--ctp-text); }
+.chroma .vc { color: var(--ctp-text); }
+.chroma .vg { color: var(--ctp-text); }
+.chroma .vi { color: var(--ctp-text); }
+.chroma .vm { color: var(--ctp-text); }
+/* Literals — Strings */
+.chroma .s { color: var(--ctp-green); }
+.chroma .sa { color: var(--ctp-green); }
+.chroma .sb { color: var(--ctp-green); }
+.chroma .sc { color: var(--ctp-green); }
+.chroma .dl { color: var(--ctp-green); }
+.chroma .sd { color: var(--ctp-green); font-style: italic; }
+.chroma .s2 { color: var(--ctp-green); }
+.chroma .se { color: var(--ctp-peach); font-weight: bold; }
+.chroma .sh { color: var(--ctp-green); }
+.chroma .si { color: var(--ctp-peach); }
+.chroma .sx { color: var(--ctp-green); }
+.chroma .sr { color: var(--ctp-peach); }
+.chroma .s1 { color: var(--ctp-green); }
+.chroma .ss { color: var(--ctp-green); }
+/* Literals — Numbers */
+.chroma .m { color: var(--ctp-peach); }
+.chroma .mb { color: var(--ctp-peach); }
+.chroma .mf { color: var(--ctp-peach); }
+.chroma .mh { color: var(--ctp-peach); }
+.chroma .mi { color: var(--ctp-peach); }
+.chroma .il { color: var(--ctp-peach); }
+.chroma .mo { color: var(--ctp-peach); }
 /* Operators */
-.chroma .o, .chroma .ow {
-  color: var(--ctp-sky);
-}
-/* Functions */
-.chroma .nf, .chroma .fm {
-  color: var(--ctp-blue);
-}
-/* Names/variables */
-.chroma .n, .chroma .na, .chroma .nb, .chroma .ni, .chroma .nl, .chroma .nn, .chroma .nx, .chroma .py {
-  color: var(--ctp-text);
-}
-/* Built-in names */
-.chroma .nb {
-  color: var(--ctp-red);
-}
-/* Class names */
-.chroma .nc, .chroma .no, .chroma .nd, .chroma .ne {
-  color: var(--ctp-yellow);
-}
-/* Name tag (HTML tags) */
-.chroma .nt {
-  color: var(--ctp-mauve);
-}
-/* Name attribute */
-.chroma .na {
-  color: var(--ctp-yellow);
-}
+.chroma .o { color: var(--ctp-sky); }
+.chroma .ow { color: var(--ctp-mauve); font-weight: bold; }
 /* Punctuation */
-.chroma .p {
-  color: var(--ctp-overlay2);
-}
-/* Generic (diff) */
-.chroma .gi { color: var(--ctp-green); }
-.chroma .gd { color: var(--ctp-red); }
+.chroma .p { color: var(--ctp-overlay2); }
+/* Comments */
+.chroma .c { color: var(--ctp-overlay2); font-style: italic; }
+.chroma .ch { color: var(--ctp-overlay2); font-style: italic; }
+.chroma .cm { color: var(--ctp-overlay2); font-style: italic; }
+.chroma .c1 { color: var(--ctp-overlay2); font-style: italic; }
+.chroma .cs { color: var(--ctp-overlay2); font-style: italic; font-weight: bold; }
+.chroma .cp { color: var(--ctp-peach); font-weight: bold; }
+.chroma .cpf { color: var(--ctp-peach); }
+/* Generic */
+.chroma .gd { color: var(--ctp-red); background-color: color-mix(in srgb, var(--ctp-red) 15%, transparent); }
+.chroma .ge { font-style: italic; }
+.chroma .gh { color: var(--ctp-blue); font-weight: bold; }
+.chroma .gi { color: var(--ctp-green); background-color: color-mix(in srgb, var(--ctp-green) 15%, transparent); }
+.chroma .go { color: var(--ctp-overlay1); }
+.chroma .gp { color: var(--ctp-overlay2); font-weight: bold; }
+.chroma .gs { font-weight: bold; }
+.chroma .gu { color: var(--ctp-blue); font-weight: bold; }
+.chroma .gl { text-decoration: underline; }
+/* Whitespace */
+.chroma .w { color: var(--ctp-surface2); }
 
 /* Hide raw mermaid source until rendered */
 .mermaid:not([data-processed]) {
