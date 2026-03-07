@@ -193,97 +193,97 @@ pre.chroma {
 
 .highlight,
 .chroma {
-  background-color: var(--ctp-mantle);
-  color: var(--ctp-text);
+  background-color: var(--ctp-mantle) !important;
+  color: var(--ctp-text) !important;
 }
 
 /* Chroma syntax highlighting — Catppuccin Latte (light) / Macchiato (dark) */
 
 /* Error */
-.chroma .err { color: var(--ctp-red); }
+.chroma .err { color: var(--ctp-red) !important; }
 /* Line link, line highlight, line numbers, line numbers in table */
-.chroma .lnlinks { outline: none; text-decoration: none; color: inherit; }
-.chroma .hl { background-color: var(--ctp-surface0); }
+.chroma .lnlinks { outline: none !important; text-decoration: none !important; color: inherit !important; }
+.chroma .hl { background-color: var(--ctp-surface0) !important; }
 .chroma .ln,
-.chroma .lnt { color: var(--ctp-overlay1); }
+.chroma .lnt { color: var(--ctp-overlay1) !important; }
 /* Keywords */
-.chroma .k { color: var(--ctp-mauve); font-weight: bold; }
-.chroma .kc { color: var(--ctp-peach); }
-.chroma .kd { color: var(--ctp-mauve); }
-.chroma .kn { color: var(--ctp-mauve); }
-.chroma .kp { color: var(--ctp-mauve); }
-.chroma .kr { color: var(--ctp-mauve); font-weight: bold; }
-.chroma .kt { color: var(--ctp-yellow); }
+.chroma .k { color: var(--ctp-mauve) !important; font-weight: bold !important; }
+.chroma .kc { color: var(--ctp-peach) !important; }
+.chroma .kd { color: var(--ctp-mauve) !important; }
+.chroma .kn { color: var(--ctp-mauve) !important; }
+.chroma .kp { color: var(--ctp-mauve) !important; }
+.chroma .kr { color: var(--ctp-mauve) !important; font-weight: bold !important; }
+.chroma .kt { color: var(--ctp-yellow) !important; }
 /* Names */
-.chroma .n { color: var(--ctp-flamingo); }
-.chroma .na { color: var(--ctp-lavender); }
-.chroma .nb { color: var(--ctp-peach); }
-.chroma .bp { color: var(--ctp-red); font-style: italic; }
-.chroma .nc { color: var(--ctp-yellow); font-weight: bold; }
-.chroma .no { color: var(--ctp-peach); }
-.chroma .nd { color: var(--ctp-peach); font-weight: bold; }
-.chroma .ne { color: var(--ctp-mauve); font-weight: bold; }
-.chroma .nf { color: var(--ctp-blue); }
-.chroma .fm { color: var(--ctp-blue); }
-.chroma .ni { color: var(--ctp-yellow); font-weight: bold; }
-.chroma .nl { color: var(--ctp-sapphire); }
-.chroma .nn { color: var(--ctp-yellow); }
-.chroma .nx { color: var(--ctp-text); }
-.chroma .py { color: var(--ctp-lavender); }
-.chroma .nt { color: var(--ctp-blue); }
-.chroma .nv { color: var(--ctp-text); }
-.chroma .vc { color: var(--ctp-text); }
-.chroma .vg { color: var(--ctp-text); }
-.chroma .vi { color: var(--ctp-text); }
-.chroma .vm { color: var(--ctp-red); }
+.chroma .n { color: var(--ctp-flamingo) !important; }
+.chroma .na { color: var(--ctp-lavender) !important; }
+.chroma .nb { color: var(--ctp-peach) !important; }
+.chroma .bp { color: var(--ctp-red) !important; font-style: italic !important; }
+.chroma .nc { color: var(--ctp-yellow) !important; font-weight: bold !important; }
+.chroma .no { color: var(--ctp-peach) !important; }
+.chroma .nd { color: var(--ctp-peach) !important; font-weight: bold !important; }
+.chroma .ne { color: var(--ctp-mauve) !important; font-weight: bold !important; }
+.chroma .nf { color: var(--ctp-blue) !important; }
+.chroma .fm { color: var(--ctp-blue) !important; }
+.chroma .ni { color: var(--ctp-yellow) !important; font-weight: bold !important; }
+.chroma .nl { color: var(--ctp-sapphire) !important; }
+.chroma .nn { color: var(--ctp-yellow) !important; }
+.chroma .nx { color: var(--ctp-text) !important; }
+.chroma .py { color: var(--ctp-lavender) !important; }
+.chroma .nt { color: var(--ctp-blue) !important; }
+.chroma .nv { color: var(--ctp-text) !important; }
+.chroma .vc { color: var(--ctp-text) !important; }
+.chroma .vg { color: var(--ctp-text) !important; }
+.chroma .vi { color: var(--ctp-text) !important; }
+.chroma .vm { color: var(--ctp-red) !important; }
 /* Literals — Strings */
-.chroma .s { color: var(--ctp-green); }
-.chroma .sa { color: var(--ctp-green); }
-.chroma .sb { color: var(--ctp-green); }
-.chroma .sc { color: var(--ctp-teal); }
-.chroma .dl { color: var(--ctp-green); }
-.chroma .sd { color: var(--ctp-teal); font-style: italic; }
-.chroma .s2 { color: var(--ctp-green); }
-.chroma .se { color: var(--ctp-pink); }
-.chroma .sh { color: var(--ctp-green); }
-.chroma .si { color: var(--ctp-pink); }
-.chroma .sx { color: var(--ctp-green); }
-.chroma .sr { color: var(--ctp-pink); }
-.chroma .s1 { color: var(--ctp-green); }
-.chroma .ss { color: var(--ctp-flamingo); }
+.chroma .s { color: var(--ctp-green) !important; }
+.chroma .sa { color: var(--ctp-green) !important; }
+.chroma .sb { color: var(--ctp-green) !important; }
+.chroma .sc { color: var(--ctp-teal) !important; }
+.chroma .dl { color: var(--ctp-green) !important; }
+.chroma .sd { color: var(--ctp-teal) !important; font-style: italic !important; }
+.chroma .s2 { color: var(--ctp-green) !important; }
+.chroma .se { color: var(--ctp-pink) !important; }
+.chroma .sh { color: var(--ctp-green) !important; }
+.chroma .si { color: var(--ctp-pink) !important; }
+.chroma .sx { color: var(--ctp-green) !important; }
+.chroma .sr { color: var(--ctp-pink) !important; }
+.chroma .s1 { color: var(--ctp-green) !important; }
+.chroma .ss { color: var(--ctp-flamingo) !important; }
 /* Literals — Numbers */
-.chroma .m { color: var(--ctp-peach); }
-.chroma .mb { color: var(--ctp-peach); }
-.chroma .mf { color: var(--ctp-peach); }
-.chroma .mh { color: var(--ctp-peach); }
-.chroma .mi { color: var(--ctp-peach); }
-.chroma .il { color: var(--ctp-peach); }
-.chroma .mo { color: var(--ctp-peach); }
+.chroma .m { color: var(--ctp-peach) !important; }
+.chroma .mb { color: var(--ctp-peach) !important; }
+.chroma .mf { color: var(--ctp-peach) !important; }
+.chroma .mh { color: var(--ctp-peach) !important; }
+.chroma .mi { color: var(--ctp-peach) !important; }
+.chroma .il { color: var(--ctp-peach) !important; }
+.chroma .mo { color: var(--ctp-peach) !important; }
 /* Operators */
-.chroma .o { color: var(--ctp-sky); }
-.chroma .ow { color: var(--ctp-mauve); font-weight: bold; }
+.chroma .o { color: var(--ctp-sky) !important; }
+.chroma .ow { color: var(--ctp-mauve) !important; font-weight: bold !important; }
 /* Punctuation */
-.chroma .p { color: var(--ctp-overlay2); }
+.chroma .p { color: var(--ctp-overlay2) !important; }
 /* Comments */
-.chroma .c { color: var(--ctp-overlay0); font-style: italic; }
-.chroma .ch { color: var(--ctp-overlay0); font-style: italic; }
-.chroma .cm { color: var(--ctp-overlay0); font-style: italic; }
-.chroma .c1 { color: var(--ctp-overlay0); font-style: italic; }
-.chroma .cs { color: var(--ctp-overlay0); font-style: italic; font-weight: bold; }
-.chroma .cp { color: var(--ctp-pink); font-weight: bold; }
-.chroma .cpf { color: var(--ctp-green); }
+.chroma .c { color: var(--ctp-overlay0) !important; font-style: italic !important; }
+.chroma .ch { color: var(--ctp-overlay0) !important; font-style: italic !important; }
+.chroma .cm { color: var(--ctp-overlay0) !important; font-style: italic !important; }
+.chroma .c1 { color: var(--ctp-overlay0) !important; font-style: italic !important; }
+.chroma .cs { color: var(--ctp-overlay0) !important; font-style: italic !important; font-weight: bold !important; }
+.chroma .cp { color: var(--ctp-pink) !important; font-weight: bold !important; }
+.chroma .cpf { color: var(--ctp-green) !important; }
 /* Generic */
-.chroma .gd { color: var(--ctp-red); background-color: color-mix(in srgb, var(--ctp-red) 15%, transparent); }
-.chroma .ge { font-style: italic; }
-.chroma .gh { color: var(--ctp-blue); font-weight: bold; }
-.chroma .gi { color: var(--ctp-green); background-color: color-mix(in srgb, var(--ctp-green) 15%, transparent); }
-.chroma .go { color: var(--ctp-overlay1); }
-.chroma .gp { color: var(--ctp-overlay2); font-weight: bold; }
-.chroma .gs { font-weight: bold; }
-.chroma .gu { color: var(--ctp-blue); font-weight: bold; }
-.chroma .gl { text-decoration: underline; }
+.chroma .gd { color: var(--ctp-red) !important; background-color: color-mix(in srgb, var(--ctp-red) 15%, transparent) !important; }
+.chroma .ge { font-style: italic !important; }
+.chroma .gh { color: var(--ctp-blue) !important; font-weight: bold !important; }
+.chroma .gi { color: var(--ctp-green) !important; background-color: color-mix(in srgb, var(--ctp-green) 15%, transparent) !important; }
+.chroma .go { color: var(--ctp-overlay1) !important; }
+.chroma .gp { color: var(--ctp-overlay2) !important; font-weight: bold !important; }
+.chroma .gs { font-weight: bold !important; }
+.chroma .gu { color: var(--ctp-blue) !important; font-weight: bold !important; }
+.chroma .gl { text-decoration: underline !important; }
 /* Whitespace */
-.chroma .w { color: var(--ctp-surface2); }
+.chroma .w { color: var(--ctp-surface2) !important; }
 
 /* Hide raw mermaid source until rendered */
 .mermaid:not([data-processed]) {
