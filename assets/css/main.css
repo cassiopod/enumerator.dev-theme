@@ -84,31 +84,31 @@ html {
 }
 
 @plugin "daisyui/theme" {
-  name: "catppuccin-mocha";
+  name: "catppuccin-macchiato";
   default: false;
   prefersdark: true;
   color-scheme: dark;
 
-  --color-base-100: #1e1e2e;
-  --color-base-200: #181825;
-  --color-base-300: #11111b;
-  --color-base-content: #cdd6f4;
-  --color-primary: #cba6f7;
-  --color-primary-content: #1e1e2e;
-  --color-secondary: #89b4fa;
-  --color-secondary-content: #1e1e2e;
-  --color-accent: #f5c2e7;
-  --color-accent-content: #1e1e2e;
-  --color-neutral: #313244;
-  --color-neutral-content: #cdd6f4;
-  --color-info: #74c7ec;
-  --color-info-content: #1e1e2e;
-  --color-success: #a6e3a1;
-  --color-success-content: #1e1e2e;
-  --color-warning: #f9e2af;
-  --color-warning-content: #1e1e2e;
-  --color-error: #f38ba8;
-  --color-error-content: #1e1e2e;
+  --color-base-100: #24273a;
+  --color-base-200: #1e2030;
+  --color-base-300: #181926;
+  --color-base-content: #cad3f5;
+  --color-primary: #c6a0f6;
+  --color-primary-content: #24273a;
+  --color-secondary: #8aadf4;
+  --color-secondary-content: #24273a;
+  --color-accent: #f5bde6;
+  --color-accent-content: #24273a;
+  --color-neutral: #363a4f;
+  --color-neutral-content: #cad3f5;
+  --color-info: #7dc4e4;
+  --color-info-content: #24273a;
+  --color-success: #a6da95;
+  --color-success-content: #24273a;
+  --color-warning: #eed49f;
+  --color-warning-content: #24273a;
+  --color-error: #ed8796;
+  --color-error-content: #24273a;
 }
 
 body {
@@ -153,30 +153,30 @@ code, kbd, pre, samp {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ctp-rosewater: #f5e0dc;
-    --ctp-flamingo: #f2cdcd;
-    --ctp-pink: #f5c2e7;
-    --ctp-mauve: #cba6f7;
-    --ctp-red: #f38ba8;
-    --ctp-maroon: #eba0ac;
-    --ctp-peach: #fab387;
-    --ctp-yellow: #f9e2af;
-    --ctp-green: #a6e3a1;
-    --ctp-teal: #94e2d5;
-    --ctp-sky: #89dceb;
-    --ctp-sapphire: #74c7ec;
-    --ctp-blue: #89b4fa;
-    --ctp-lavender: #b4befe;
-    --ctp-text: #cdd6f4;
-    --ctp-subtext1: #bac2de;
-    --ctp-overlay2: #9399b2;
-    --ctp-overlay1: #7f849c;
-    --ctp-surface2: #585b70;
-    --ctp-surface1: #45475a;
-    --ctp-surface0: #313244;
-    --ctp-base: #1e1e2e;
-    --ctp-mantle: #181825;
-    --ctp-crust: #11111b;
+    --ctp-rosewater: #f4dbd6;
+    --ctp-flamingo: #f0c6c6;
+    --ctp-pink: #f5bde6;
+    --ctp-mauve: #c6a0f6;
+    --ctp-red: #ed8796;
+    --ctp-maroon: #ee99a0;
+    --ctp-peach: #f5a97f;
+    --ctp-yellow: #eed49f;
+    --ctp-green: #a6da95;
+    --ctp-teal: #8bd5ca;
+    --ctp-sky: #91d7e3;
+    --ctp-sapphire: #7dc4e4;
+    --ctp-blue: #8aadf4;
+    --ctp-lavender: #b7bdf8;
+    --ctp-text: #cad3f5;
+    --ctp-subtext1: #b8c0e0;
+    --ctp-overlay2: #939ab7;
+    --ctp-overlay1: #8087a2;
+    --ctp-surface2: #5b6078;
+    --ctp-surface1: #494d64;
+    --ctp-surface0: #363a4f;
+    --ctp-base: #24273a;
+    --ctp-mantle: #1e2030;
+    --ctp-crust: #181926;
   }
 }
 
@@ -194,7 +194,7 @@ pre.chroma {
   color: var(--ctp-text);
 }
 
-/* Chroma syntax highlighting — Catppuccin Latte (light) / Mocha (dark) */
+/* Chroma syntax highlighting — Catppuccin Latte (light) / Macchiato (dark) */
 
 /* Error */
 .chroma .err { color: var(--ctp-red); }

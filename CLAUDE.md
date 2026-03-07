@@ -52,7 +52,7 @@ See `exampleSite/` for a working site using this theme.
 
 ## Styling
 
-- Catppuccin palette: latte (light), mocha (dark via `prefers-color-scheme`)
+- Catppuccin palette: latte (light), macchiato (dark via `prefers-color-scheme`)
 - Fonts: Source Serif 4 (headings), Source Sans 3 (body), Source Code Pro (code)
 - Syntax highlighting: Chroma (server-side) with Catppuccin CSS variables
 - Diagrams: Mermaid via CDN (`static/js/mermaid.js`)
