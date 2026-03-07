@@ -1,5 +1,5 @@
 (function () {
-  var codeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+  var codeBlocks = document.querySelectorAll('pre > code.language-mermaid, pre > code[data-lang="mermaid"]');
   if (codeBlocks.length === 0) return;
 
   var sources = [];
