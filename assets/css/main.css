@@ -1,6 +1,5 @@
 @import "tailwindcss";
-@source "hugo_stats.json";
-@source "../../layouts/**/*.html";
+@source "notwatching/hugo_stats.json";
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
 

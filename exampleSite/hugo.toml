@@ -12,6 +12,7 @@ pluralizeListTitles = false
   [params.plausible]
     enable = true
     domain = 'enumerator.dev'
+    gitstar = false
 
 [taxonomies]
   category = 'categories'
