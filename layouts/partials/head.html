@@ -10,3 +10,4 @@
 {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" href="%s" type="%s" title="%s">` .Rel .Permalink .MediaType.Type $.Site.Title | safeHTML }}
 {{ end -}}
+{{ partial "plausible_head.html" . }}

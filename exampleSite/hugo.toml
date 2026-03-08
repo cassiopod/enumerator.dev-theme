@@ -9,6 +9,10 @@ pluralizeListTitles = false
 [params]
   description = 'A dev blog by cassiopod'
 
+  [params.plausible]
+    enable = true
+    domain = 'enumerator.dev'
+
 [taxonomies]
   category = 'categories'
 
