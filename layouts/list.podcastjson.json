@@ -4,27 +4,12 @@
 	"icon": "{{ .Site.Params.author_avatar }}",
 	"home_page_url": "{{ .Site.BaseURL }}",
 	"feed_url": "{{ .Site.BaseURL }}podcast.json",
-	"_podcast": {
-		"about": "https://jsonfeed.org/podcasting",
-		"image": "{{ .Site.Params.itunes_cover }}",
-		"explicit": false,
-		"categories": [
-			{
-				"category": {{ .Site.Params.itunes_category | jsonify }},
-				"subcategory": {{ .Site.Params.itunes_subcategory | jsonify }}
-			}
-		]
-	},
 	"items": [
 		{{- $list := where .Site.Pages ".Params.audio_with_metadata" "!=" nil -}}
 		{{- $len := (len $list) -}}
 		{{ range $index, $value := $list }}
 			{
-				{{ if .Params.guid -}}
-				"id": "{{ .Params.guid }}",
-				{{- else -}}
 				"id": "{{ .Permalink }}",
-				{{- end }}
 				{{ if .Title -}}
 				"title": {{ .Title | jsonify }},
 				{{- end -}}

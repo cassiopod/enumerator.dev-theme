@@ -9,11 +9,7 @@
 		{{- $len := (len $list) -}}
 		{{ range $index, $value := $list }}
 			{
-				{{ if .Params.guid -}}
-				"id": "{{ .Params.guid }}",
-				{{- else -}}
 				"id": "{{ .Permalink }}",
-				{{- end }}
 				{{ if .Title -}}
 				"title": {{ .Title | jsonify }},
 				{{- end -}}
@@ -22,7 +18,6 @@
 				{{- $s := replace $s "\\u003e" ">" -}}
 				{{- $s := replace $s "\\u0026" "&" }}
 				"content_html": {{ $s }},
-				{{ if .Params.custom_summary }}"summary": {{ .Summary | plainify | jsonify }},{{ end }}
 				"date_published": "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}",
 				"url": "{{ .Permalink }}"
 				{{- with .Params.categories -}}

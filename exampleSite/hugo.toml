@@ -8,7 +8,6 @@ pluralizeListTitles = false
 
 [params]
   description = 'A dev blog by cassiopod'
-  microblog_username = 'cassiopod'
 
 [taxonomies]
   category = 'categories'
@@ -31,11 +30,6 @@ pluralizeListTitles = false
     baseName = "feed"
   [outputFormats.JSON]
     baseName = "feed"
-  [outputFormats.RSD]
-    mediaType = "application/xml"
-    baseName = "rsd"
-    isPlainText = true
-    notAlternative = true
   [outputFormats.ArchiveJSON]
     mediaType = "application/json"
     path = "archive"
@@ -60,7 +54,7 @@ pluralizeListTitles = false
     notAlternative = true
 
 [outputs]
-  home = ['HTML', 'RSS', 'JSON', 'RSD', 'ArchiveJSON', 'PhotosJSON', 'PodcastXML', 'PodcastJSON']
+  home = ['HTML', 'RSS', 'JSON', 'ArchiveJSON', 'PhotosJSON', 'PodcastXML', 'PodcastJSON']
   page = ['HTML']
   section = ['HTML']
   taxonomy = ['HTML', 'RSS', 'JSON']

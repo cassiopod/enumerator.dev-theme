@@ -7,4 +7,6 @@
 <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
 <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 <link rel="stylesheet" href="{{ "cassiopod.css" | relURL }}">
-{{ partial "microblog_head.html" . }}
+{{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" href="%s" type="%s" title="%s">` .Rel .Permalink .MediaType.Type $.Site.Title | safeHTML }}
+{{ end -}}
