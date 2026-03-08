@@ -1,26 +1,24 @@
 # CLAUDE.md
 
-Cassiopod is a Hugo theme with Catppuccin colors, micro.blog compatibility, and Hugo 0.91 support. Based on the visual design of the enumerator-dev Ghost theme.
+Cassiopod is a Hugo theme with Catppuccin colors, Tailwind CSS, and daisyUI. Based on the visual design of the enumerator-dev Ghost theme.
 
 ## Usage
 
-Add to a Hugo site as `themes/cassiopod/`, then set `theme = 'cassiopod'` in `config.toml`.
-
-See `exampleSite/` for a working site using this theme.
+Import as a Hugo module, then configure in `hugo.toml`. See `exampleSite/` for a working site.
 
 ## Development
 
-**Hugo version:** 0.91 (required for micro.blog compatibility)
+**Hugo version:** 0.157+ (uses `css.TailwindCSS`, Hugo modules, `hugo.toml`)
 
-**CSS build:** Tailwind CSS v4 + daisyUI v5 + @tailwindcss/typography. Pre-compiled via Tailwind CLI and committed as `static/cassiopod.css`. No Hugo asset pipeline (Hugo 0.91 doesn't support `css.TailwindCSS`).
-
-**Rebuild CSS:** From theme root, run `npm install` then `npm run build:css` (after editing `assets/css/main.css`).
+**CSS:** Tailwind CSS v4 + daisyUI v5 + @tailwindcss/typography. Built by Hugo's `css.TailwindCSS` asset pipeline at build time from `assets/css/main.css`. Requires Node.js + npm (`npm install` for Tailwind CLI).
 
 **Dev server:** From `exampleSite/`, run `hugo server -D`
 
+**Go modules:** Theme uses Hugo modules (`go.mod`). The plausible-hugo analytics module is imported as a dependency.
+
 ## Template structure
 
-- `layouts/_default/baseof.html` — root layout (navbar, main, footer, custom_footer)
+- `layouts/_default/baseof.html` — root layout (navbar, main, footer)
 - `layouts/_default/list.html` — homepage and section listings (shows full post content)
 - `layouts/_default/single.html` — blog post page
 - `layouts/page/single.html` — static page (no date/categories metadata)
@@ -28,25 +26,20 @@ See `exampleSite/` for a working site using this theme.
 - `layouts/404.html` — error page
 - `layouts/_default/_markup/render-codeblock-mermaid.html` — preserves mermaid code blocks for client-side rendering
 
-### micro.blog templates
+### Feed templates
 
 - `layouts/index.xml`, `layouts/index.json` — RSS and JSON Feed
 - `layouts/_default/rss.xml`, `layouts/_default/list.json.json` — default feed templates
 - `layouts/list.archivejson.json`, `layouts/list.archivehtml.html` — archive feeds
 - `layouts/list.photosjson.json`, `layouts/list.photoshtml.html` — photo feeds
 - `layouts/list.podcastxml.xml`, `layouts/list.podcastjson.json` — podcast feeds
-- `layouts/list.rsd.xml` — RSD discovery
 - `layouts/_default/sitemap.xml`, `layouts/robots.txt` — SEO
-- `layouts/newsletter.html`, `layouts/redirect/single.html` — utilities
 
 ### Partials
 
-- `head.html` — meta tags, static CSS link, includes `microblog_head.html`
-- `microblog_head.html` — micro.blog identity, feed discovery, endpoints, plugin CSS
-- `microblog_syndication.html` — Bluesky syndication links
+- `head.html` — meta tags, Tailwind CSS pipeline, feed discovery, plausible analytics
 - `navbar.html` — site title + `menus.main`
 - `footer.html` — `menus.footer` + copyright
-- `custom_footer.html` — empty micro.blog plugin hook
 - `card.html` — post card for archive listings
 - `pagination.html` — newer/older navigation
 
@@ -54,24 +47,31 @@ See `exampleSite/` for a working site using this theme.
 
 - Catppuccin palette: latte (light), macchiato (dark via `prefers-color-scheme`)
 - Fonts: Source Serif 4 (headings), Source Sans 3 (body), Source Code Pro (code)
-- Syntax highlighting: Chroma (server-side) with Catppuccin CSS classes. Theme sets `noClasses = false` in `config.toml` so Hugo emits CSS classes (not inline styles). Catppuccin token colors are defined in `assets/css/main.css`. For micro.blog, `config/_default/markup.json` provides the same setting.
+- Syntax highlighting: Chroma (server-side) with Catppuccin CSS variables. `noClasses = false` in `hugo.toml` so Hugo emits CSS classes. Token colors defined in `assets/css/main.css`.
 - Diagrams: Mermaid via CDN (`static/js/mermaid.js`)
 
 ## Content model
 
 - Posts: `content/post/*.md` — front matter: title, date, categories, images, summary, draft
 - Pages: `content/page/*.md` with `type: "page"` — use `hide_title: true` to hide title/image
-- Categories: auto-generated from post front matter (micro.blog uses categories, not tags)
+- Categories: auto-generated from post front matter
 
 ## Configuration
 
-Site config in `config.toml` (not `hugo.toml` — Hugo 0.91 doesn't support that name). Menus: `menus.main` (navbar), `menus.footer` (footer). See `exampleSite/config.toml` for required output formats (RSS, JSON, RSD, archive, photos, podcast).
+Site config in `hugo.toml`. Menus: `menus.main` (navbar), `menus.footer` (footer). See `exampleSite/hugo.toml` for required output formats (RSS, JSON, archive, photos, podcast).
 
-### micro.blog params
+### Analytics
 
-Templates use `.Site.Params` for author info (compatible with both Hugo 0.91 and modern Hugo):
+Plausible analytics via [plausible-hugo](https://github.com/divinerites/plausible-hugo) module:
 
-- `microblog_username` — micro.blog username (for identity links and favicon)
-- `author_avatar` — avatar URL (for JSON feeds and newsletter)
+```toml
+[params.plausible]
+  enable = true
+  domain = 'example.com'
+```
+
+### Site params
+
+- `author_avatar` — avatar URL (for JSON feeds)
 - `author_email` — author email (for RSS feeds)
 - `author_name` — author display name (for RSS feeds)
